@@ -1,0 +1,60 @@
+diff -ur ibus-pinyin-1.3.99.20110706/src/PYDatabase.h ibus-pinyin-1.3.99.20110706.boost/src/PYDatabase.h
+--- ibus-pinyin-1.3.99.20110706/src/PYDatabase.h	2011-02-07 17:33:37.000000000 +0100
++++ ibus-pinyin-1.3.99.20110706.boost/src/PYDatabase.h	2011-07-20 13:31:54.360627955 +0200
+@@ -34,7 +34,7 @@
+ struct Phrase;
+ 
+ class SQLStmt;
+-typedef std::shared_ptr<SQLStmt> SQLStmtPtr;
++typedef boost::shared_ptr<SQLStmt> SQLStmtPtr;
+ 
+ class Database;
+ 
+diff -ur ibus-pinyin-1.3.99.20110706/src/PYEditor.h ibus-pinyin-1.3.99.20110706.boost/src/PYEditor.h
+--- ibus-pinyin-1.3.99.20110706/src/PYEditor.h	2011-01-15 01:32:10.000000000 +0100
++++ ibus-pinyin-1.3.99.20110706.boost/src/PYEditor.h	2011-07-20 13:31:27.927627960 +0200
+@@ -34,7 +34,7 @@
+ class Config;
+ 
+ class Editor;
+-typedef std::shared_ptr<Editor> EditorPtr;
++typedef boost::shared_ptr<Editor> EditorPtr;
+ 
+ class Editor {
+ public:
+diff -ur ibus-pinyin-1.3.99.20110706/src/PYPhraseEditor.h ibus-pinyin-1.3.99.20110706.boost/src/PYPhraseEditor.h
+--- ibus-pinyin-1.3.99.20110706/src/PYPhraseEditor.h	2011-01-15 01:32:10.000000000 +0100
++++ ibus-pinyin-1.3.99.20110706.boost/src/PYPhraseEditor.h	2011-07-20 13:30:12.702627978 +0200
+@@ -125,7 +125,7 @@
+     PinyinArray m_pinyin;
+     guint m_cursor;
+     PinyinProperties & m_props;
+-    std::shared_ptr<Query> m_query;
++    boost::shared_ptr<Query> m_query;
+     Config    & m_config;
+ };
+ 
+diff -ur ibus-pinyin-1.3.99.20110706/src/PYSpecialPhraseTable.h ibus-pinyin-1.3.99.20110706.boost/src/PYSpecialPhraseTable.h
+--- ibus-pinyin-1.3.99.20110706/src/PYSpecialPhraseTable.h	2011-01-15 01:32:10.000000000 +0100
++++ ibus-pinyin-1.3.99.20110706.boost/src/PYSpecialPhraseTable.h	2011-07-20 13:33:22.301627936 +0200
+@@ -30,7 +30,7 @@
+ namespace PY {
+ 
+ class SpecialPhrase;
+-typedef std::shared_ptr<SpecialPhrase> SpecialPhrasePtr;
++typedef boost::shared_ptr<SpecialPhrase> SpecialPhrasePtr;
+ 
+ class SpecialPhraseTable {
+ private:
+diff -ur ibus-pinyin-1.3.99.20110706/src/PYUtil.h ibus-pinyin-1.3.99.20110706.boost/src/PYUtil.h
+--- ibus-pinyin-1.3.99.20110706/src/PYUtil.h	2011-01-15 01:32:10.000000000 +0100
++++ ibus-pinyin-1.3.99.20110706.boost/src/PYUtil.h	2011-07-20 13:30:01.115627981 +0200
+@@ -43,7 +43,7 @@
+ 
+ namespace std {
+     // import boost::shared_ptr to std namespace
+-    using boost::shared_ptr;
++    // using boost::shared_ptr;
+     // import boost::scoped_ptr to std namespace, and rename to unique_ptr
+     // XXX: the unique_ptr can transfer the pointer ownership,
+     //      but scoped_ptr cannot.

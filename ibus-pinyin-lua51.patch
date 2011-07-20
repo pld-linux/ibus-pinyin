@@ -1,0 +1,11 @@
+--- ibus-pinyin-1.3.99.20110706/configure.ac~	2011-07-06 19:15:14.000000000 +0200
++++ ibus-pinyin-1.3.99.20110706/configure.ac	2011-07-20 13:46:16.493627757 +0200
+@@ -177,7 +177,7 @@
+ if test x"$has_lua_extension" = x"no";
+ then
+     PKG_CHECK_MODULES(LUA, [
+-        lua5.1
++        lua51
+     ], [],
+     [enable_lua_extension=no]
+     );
