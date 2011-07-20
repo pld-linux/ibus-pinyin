@@ -56,7 +56,7 @@ cp %{SOURCE1} data/db/open-phrase
 	--disable-opencc \
 	--enable-boost
 
-%{__make} -j1
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
