@@ -1,7 +1,7 @@
 Summary:	The Chinese Pinyin and Bopomofo engines for IBus input platform
 Name:		ibus-pinyin
 Version:	1.3.99.20110706
-Release:	0.1
+Release:	0.2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://ibus.googlecode.com/files/%{name}-%{version}.tar.gz
@@ -72,8 +72,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%{_libexecdir}/ibus-engine-pinyin
-%{_libexecdir}/ibus-setup-pinyin
+%attr(755,root,root) %{_libexecdir}/ibus-engine-pinyin
+%attr(755,root,root) %{_libexecdir}/ibus-setup-pinyin
 %{_datadir}/ibus-pinyin/phrases.txt
 %{_datadir}/ibus-pinyin/icons
 %{_datadir}/ibus-pinyin/setup
