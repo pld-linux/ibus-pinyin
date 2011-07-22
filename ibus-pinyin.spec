@@ -1,7 +1,7 @@
 Summary:	The Chinese Pinyin and Bopomofo engines for IBus input platform
 Name:		ibus-pinyin
 Version:	1.3.99.20110706
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://ibus.googlecode.com/files/%{name}-%{version}.tar.gz
@@ -29,7 +29,7 @@ The Chinese Pinyin and Bopomof input methods for IBus platform.
 %package db-open-phrase
 Summary:	The open phrase database for ibus Pinyin
 Group:		Libraries
-Requires:	ibus-pinyin-db = %{version}-%{release}
+Provides:	ibus-pinyin-db = %{version}-%{release}
 
 %description db-open-phrase
 The phrase database for ibus Pinyin and Bopomofo from open-phrase
@@ -38,7 +38,7 @@ project.
 %package db-android
 Summary:	The android phrase database for ibus Pinyin and Bopomofo
 Group:		Libraries
-Requires:	ibus-pinyin-db = %{version}-%{release}
+Provides:	ibus-pinyin-db = %{version}-%{release}
 
 %description db-android
 The phrase database for ibus Pinyin and Bopomofo from android project.
