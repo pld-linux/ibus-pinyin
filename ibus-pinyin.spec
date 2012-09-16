@@ -1,4 +1,7 @@
-# TODO: opencc
+#
+# Conditional build:
+%bcond_without	opencc	# OpenCC Chinese conversion
+#
 Summary:	The Chinese Pinyin and Bopomofo engines for IBus input platform
 Summary(pl.UTF-8):	Silniki chińskie Pinyin i Bopomofo dla platformy wprowadzania znaków IBus
 Name:		ibus-pinyin
@@ -22,6 +25,7 @@ BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libuuid-devel
 BuildRequires:	lua51-devel >= 5.1
+%{?with_opencc:BuildRequires:	opencc-devel}
 BuildRequires:	pkgconfig
 BuildRequires:	python >= 1:2.5
 BuildRequires:	sqlite3-devel >= 3
@@ -80,7 +84,7 @@ cp %{SOURCE1} data/db/open-phrase
 %configure \
 	--enable-boost \
 	--enable-db-open-phrase \
-	--disable-opencc \
+	%{?with_opencc:--enable-opencc} \
 	--disable-silent-rules
 
 %{__make}
