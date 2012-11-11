@@ -18,6 +18,7 @@ URL:		http://code.google.com/p/ibus
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	boost-devel >= 1.39
+BuildRequires:	gettext-devel
 BuildRequires:	ibus-devel >= 1.4.99
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libstdc++-devel
@@ -26,7 +27,7 @@ BuildRequires:	lua51-devel >= 5.1
 %{?with_opencc:BuildRequires:	opencc-devel}
 BuildRequires:	pkgconfig
 BuildRequires:	python >= 1:2.5
-BuildRequires:	pyzy-devel
+BuildRequires:	pyzy-devel >= 0.0.8
 BuildRequires:	sqlite3-devel >= 3
 Requires:	ibus >= 1.4.99
 %requires_eq_to pyzy-db pyzy-devel
