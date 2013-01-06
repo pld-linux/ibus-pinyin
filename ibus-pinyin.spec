@@ -5,13 +5,13 @@
 Summary:	The Chinese Pinyin and Bopomofo engines for IBus input platform
 Summary(pl.UTF-8):	Silniki chińskie Pinyin i Bopomofo dla platformy wprowadzania znaków IBus
 Name:		ibus-pinyin
-Version:	1.4.99.20120808
+Version:	1.5.0
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 #Source0Download: http://code.google.com/p/ibus/downloads/list
 Source0:	http://ibus.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	e6f3d15cd237730819f5cebf6edca4a4
+# Source0-md5:	f7728b5b785fae58e2b4de8dfda45612
 Patch0:		%{name}-xx-icon-symbol.patch
 Patch1:		%{name}-lua51.patch
 URL:		http://code.google.com/p/ibus
