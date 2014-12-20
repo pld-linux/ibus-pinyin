@@ -9,12 +9,12 @@ Version:	1.5.0
 Release:	1
 License:	GPL v2+
 Group:		Libraries
-#Source0Download: http://code.google.com/p/ibus/downloads/list
+# note: currently developed in https://github.com/ibus/ibus-pinyin
 Source0:	http://ibus.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	f7728b5b785fae58e2b4de8dfda45612
 Patch0:		%{name}-xx-icon-symbol.patch
 Patch1:		%{name}-lua51.patch
-URL:		http://code.google.com/p/ibus
+URL:		https://github.com/ibus/ibus-pinyin
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	boost-devel >= 1.39
