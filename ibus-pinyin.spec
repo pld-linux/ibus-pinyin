@@ -18,7 +18,7 @@ URL:		https://github.com/ibus/ibus-pinyin
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	boost-devel >= 1.39
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	ibus-devel >= 1.4.99
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libstdc++-devel
