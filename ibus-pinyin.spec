@@ -47,8 +47,8 @@ IBus.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 # update to support newer compilers
 cp -pf %{SOURCE1} m4/boost.m4
